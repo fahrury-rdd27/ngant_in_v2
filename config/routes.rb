@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :menus
   devise_for :warungs
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'

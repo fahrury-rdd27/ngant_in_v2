@@ -22,10 +22,10 @@
 				<li><%= link_to "Daftarkan warungmu!", new_warung_registration_path %></li>
 			<% else %>
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Account
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Warung saya
 						<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-							<li><%= link_to "Edit", edit_warung_registration_path, method: :delete %></li>
+							<li><%= link_to "Edit", edit_warung_registration_path %></li>
 							<li><nav class="divider"></nav></li>
 							<li><%= link_to "Sign out", destroy_warung_session_path, method: :delete %></li>
 						</ul>
