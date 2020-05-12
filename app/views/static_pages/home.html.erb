@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="col-md-8 col-md-offset-2">
+					<%= image_tag 'logo.png', size: '400x200', class: 'image'%>
+				</div>
+				<h1>Landing Page Ngant.in</h1>
+				<h2>disini kamu bisa mendapat pencerahan ketika lapar tapi kantong sedang tipis</h2>
+				<div class="row">
+					<div class="col-sm-4 col-sm-offset-2">
+						<div class="thumbnail">
+							<%= link_to image_tag('warung.svg', size: '5%', alt: 'login pewarung'), new_warung_session_path %>
+							<div class="caption">
+								<p>Login pewarung</p>
+							</div>
+						</div>						
+					</div>	
+					<div class="col-sm-4">
+						<div class="thumbnail">
+							<%= link_to image_tag('mhs.svg', size: '5%', alt: 'login mahasiswa') %>
+							<div class="caption">
+								<p>Login mahasiswa</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
