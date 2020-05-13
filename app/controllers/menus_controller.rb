@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_warung!, except: [:index, :show]
 
   # GET /menus
   # GET /menus.json

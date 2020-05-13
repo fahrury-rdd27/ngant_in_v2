@@ -231,11 +231,13 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   devise (~> 4.7, >= 4.7.1)
+  ffi (~> 1.12, >= 1.12.2)
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   puma (~> 4.1)
   rails (~> 6.0.2, >= 6.0.2.1)
+  ruby-vips (~> 2.0, >= 2.0.17)
   sass-rails (>= 6)
   selenium-webdriver
   spring
