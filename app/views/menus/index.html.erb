@@ -11,6 +11,9 @@
             <div class="thumbnail">
               <%= link_to (image_tag menu.image.variant(resize_to_fit: [800, 600]), class: 'image'), menu %>
             </div>
+            <div class="caption">
+              <p class="caption"><%= menu.warung.nama %></p>
+            </div>
           </div>
           <% end %>
         </div>

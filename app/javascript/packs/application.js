@@ -16,3 +16,8 @@ import "bootstrap"
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+$(".hBack").on("click", function(e){
+    e.preventDefault();
+    window.history.back();
+});

@@ -1,14 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="table-responsive">
+			<table class="table">
+				<tbody>
+					<tr>
+						<td><%= image_tag @menu.image.variant(resize_to_fit: [500, 400]), class: "image" %></td>
+					</tr>
+					<tr>
+						<td><strong><%= @menu.nama %></strong></td>
+					</tr>
+					<tr>
+						<td><strong><%= @menu.harga %></strong></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
-<p>
-  <strong>Nama:</strong>
-  <%= @menu.nama %>
-</p>
-
-<p>
-  <strong>Harga:</strong>
-  <%= @menu.harga %>
-</p>
-
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+<%= link_to 'Edit', edit_menu_path(@menu), class: 'btn btn-sm btn-default' %> |
+<%= link_to 'Back', menus_path, class: 'btn btn-sm btn-primary hBack' %>
+<% if allow_product_delete?(@product) %>
+	| <%= link_to 'Hapus menu', menu_path(@menu), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }, class: 'btn btn-sm btn-danger	' %>
+<% end %>

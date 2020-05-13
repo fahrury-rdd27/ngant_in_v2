@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_warung!, except: [:index, :show]
+  before_action :authenticate_warung!, except: [:index, :show, :destroy]
 
   # GET /menus
   # GET /menus.json
@@ -55,6 +55,7 @@ class MenusController < ApplicationController
   # DELETE /menus/1
   # DELETE /menus/1.json
   def destroy
+    @current_warung = current_warung.id
     @menu.destroy
     respond_to do |format|
       format.html { redirect_to menus_url, notice: 'Menu was successfully destroyed.' }
