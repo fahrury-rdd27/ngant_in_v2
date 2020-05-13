@@ -1,29 +1,21 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_warung!, except: [:index, :show, :destroy]
-
-  # GET /menus
-  # GET /menus.json
+  
   def index
     @menus = Menu.all
   end
-
-  # GET /menus/1
-  # GET /menus/1.json
+ 
   def show
   end
 
-  # GET /menus/new
   def new
     @menu = current_warung.menus.build
   end
-
-  # GET /menus/1/edit
+  
   def edit
-  end
-
-  # POST /menus
-  # POST /menus.json
+  end  
+  
   def create
     @menu = current_warung.menus.build(menu_params)
 
@@ -38,8 +30,7 @@ class MenusController < ApplicationController
     end
   end
 
-  # PATCH/PUT /menus/1
-  # PATCH/PUT /menus/1.json
+  
   def update
     respond_to do |format|
       if @menu.update(menu_params)
@@ -52,8 +43,7 @@ class MenusController < ApplicationController
     end
   end
 
-  # DELETE /menus/1
-  # DELETE /menus/1.json
+  
   def destroy
     @current_warung = current_warung.id
     @menu.destroy
@@ -61,6 +51,11 @@ class MenusController < ApplicationController
       format.html { redirect_to menus_url, notice: 'Menu was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def menu_saya
+    @menus = Menu.all
+    @menu = Menu.find_by_id(current_warung.menus.ids)
   end
 
   private

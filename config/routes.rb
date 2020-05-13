@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :menus
+  get '/warung_menu', to: 'menus#menu_saya'
+
   devise_for :warungs
+
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'
   get '/about', to: 'static_pages#about'
