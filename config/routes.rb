@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :menus
-  get '/warung_menu', to: 'menus#menu_saya'
+  get '/menu_saya', to: 'menus#menu_saya'
 
   devise_for :warungs
 

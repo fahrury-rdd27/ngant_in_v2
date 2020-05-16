@@ -1,32 +1,37 @@
-<%= form_with(model: menu, local: true) do |form| %>
-  <% if menu.errors.any? %>
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <%= form_with(model: menu, local: true) do |form| %>
+    <% if menu.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
       <ul>
         <% menu.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+        <li><%= message %></li>
         <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
 
-  <div class="field">
-    <%= form.label :nama %>
-    <%= form.text_field :nama, class: 'form-control' %>
-  </div>
+    <div class="field">
+      <%= form.label :nama %>
+      <%= form.text_field :nama, class: 'form-control' %>
+    </div>
 
-  <div class="field">
-    <%= form.label :harga %>
-    <%= form.text_field :harga, class: 'form-control' %>
-  </div>
+    <div class="field">
+      <%= form.label :harga %>
+      <%= form.text_field :harga, class: 'form-control' %>
+    </div>
 
-   <div class="field">
-    <%= form.label :image %>
-    <%= form.file_field :image %>
-  </div>
+    <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit  %>
+    <div class="actions">
+      <%= form.submit  %>
+    </div>
+    <% end %>
+
   </div>
-<% end %>
+</div>

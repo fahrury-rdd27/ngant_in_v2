@@ -1,24 +1,16 @@
 
 <h1>Menu di Ngant.in</h1>
 
-<div class="container">
-  <div class="panel-group">
-    <div class="panel panel-default">
-      <div class="panel-body">
-        <div class="row">
-          <% @menus.each do |menu| %>
-          <div class="col-sm-4">
-            <div class="thumbnail">
-              <%= link_to (image_tag menu.image.variant(resize_to_fit: [800, 600]), class: 'image'), menu %>
-            </div>
-            <div class="caption">
-              <p class="caption"><%= menu.warung.nama %></p>
-            </div>
-          </div>
-          <% end %>
-        </div>
+<div class="row">
+  <% @menus.each do |menu| %>
+    <div class="col-md-4">
+      <%= link_to menu do %>
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3><%= menu.nama %><h3></div>
+          <div class="panel-body"><%= image_tag menu.image.variant(resize_to_fill: [800, 600]), class: 'img-responsive' %></div>
+          <div class="panel-footer"><h4><div class="glyphicon glyphicon-map-marker"></div> <%= menu.warung.nama %></h4></div>
       </div>
-
+      <% end -%>
     </div>
-  </div>
+    <% end -%>
 </div>

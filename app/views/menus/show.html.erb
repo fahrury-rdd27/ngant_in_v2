@@ -1,25 +1,23 @@
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		<div class="table-responsive">
-			<table class="table">
-				<tbody>
-					<tr>
-						<td><%= image_tag @menu.image.variant(resize_to_fit: [500, 400]), class: "image" %></td>
-					</tr>
-					<tr>
-						<td><strong><%= @menu.nama %></strong></td>
-					</tr>
-					<tr>
-						<td><strong><%= @menu.harga %></strong></td>
-					</tr>
-				</tbody>
-			</table>
+		<div class="panel panel-success">
+			<div class="panel-heading"><h3><%= @menu.warung.nama %></h3></div>
+			<div class="panel-body"><%= image_tag @menu.image.variant(resize_to_fill: [800, 600]), class: 'img-responsive' %></div>
+			<div class="panel-footer">
+				<h4><%= @menu.nama %></h4>
+				<h4>Rp. <%= @menu.harga %></h4>
+			</div>
+			<div class="panel-footer">
+				<% if current_warung %>
+				<%= link_to 'Back', menu_saya_path, class: 'btn btn-default btn-block hBack' %>
+				<% else %>
+				<%= link_to 'Back', menus_path, class: 'btn btn-primary btn-block hBack' %>
+				<% end -%>
+				<% if allow_product_delete?(@product) %>
+				<%= link_to 'Edit', edit_menu_path(@menu), class: 'btn btn-block btn-primary' %>
+				<%= link_to 'Hapus menu', menu_path(@menu), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }, class: 'btn btn-block btn-danger' %>
+				<% end %>
+			</div>
 		</div>
 	</div>
 </div>
-
-<%= link_to 'Edit', edit_menu_path(@menu), class: 'btn btn-sm btn-default' %> |
-<%= link_to 'Back', menus_path, class: 'btn btn-sm btn-primary hBack' %>
-<% if allow_product_delete?(@product) %>
-	| <%= link_to 'Hapus menu', menu_path(@menu), method: :delete, data: { confirm: 'Are you certain you want to delete this?' }, class: 'btn btn-sm btn-danger	' %>
-<% end %>

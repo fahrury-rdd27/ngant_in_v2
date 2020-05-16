@@ -1,17 +1,24 @@
 <h1>Menu <%= current_warung.nama %></h1>
 
-<div class="panel">
-	<div class="panel-responsive">
-		<% current_warung.menus.each do |menu| %>
-		<div class="row">
-			<div class="row">
-				<div class="col-md-4 col-md-offset-1">
-					<%= image_tag menu.image.variant(resize_to_fit: [400, 600]), class: 'image-responsive', id: 'image' %>
-					<h3><%= link_to menu.nama, edit_menu_path(@menu), class: 'btn btn-lg btn-link' %><h3>
-					<div id="menu">Rp.<%= menu.harga %></div>
-				</div>
-			</div>
+<div class="row">
+	<% current_warung.menus.each do |menu| %>
+	<div class="col-sm-4">
+		<%= link_to menu do %>
+		<div class="panel panel-warning">
+			<div class="panel-heading"><h3><%= menu.nama %></h3></div>
+			<div class="panel-body"><%= image_tag menu.image.variant(resize_to_fill: [600, 400]), class: 'img-responsive' %></div>
+			<div class="panel-footer">Harga: Rp. <%= menu.harga %></div>
 		</div>
 		<% end -%>
 	</div>
+	<% end -%>
+	<%= link_to new_menu_path do -%>
+	<div class="col-sm-4">
+		<div class="panel panel-success">
+			<div class="panel-heading"><h3>Tambah menu</h3></div>
+			<div class="panel-body"><div class="glyphicon glyphicon-plus"></div></div>
+			<div class="panel-footer"></div>
+		</div>
+	</div>
+	<% end -%>
 </div>
