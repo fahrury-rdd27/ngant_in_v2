@@ -1,37 +1,42 @@
 <div class="row">
-  <div class="col-md-4 col-md-offset-4">
-    <%= form_with(model: menu, local: true) do |form| %>
-    <% if menu.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel panel-success">
+      <div class="panel-heading"><h1></h1></div>
+      <div class="panel-body">
+        <%= form_with(model: menu, local: true) do |form| %>
+        <% if menu.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
 
-      <ul>
-        <% menu.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% menu.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
         <% end %>
-      </ul>
-    </div>
-    <% end %>
 
-    <div class="field">
-      <%= form.label :nama %>
-      <%= form.text_field :nama, class: 'form-control' %>
-    </div>
+        <div class="field">
+          <%= form.label :nama %>
+          <%= form.text_field :nama, class: 'form-control' %>
+        </div>
 
-    <div class="field">
-      <%= form.label :harga %>
-      <%= form.text_field :harga, class: 'form-control' %>
-    </div>
+        <div class="field">
+          <%= form.label :harga %>
+          <%= form.text_field :harga, class: 'form-control' %>
+        </div>
 
-    <div class="field">
-      <%= form.label :image %>
-      <%= form.file_field :image %>
-    </div>
+        <div class="field">
+          <%= form.label :image %>
+          <%= form.file_field :image %>
+        </div>
 
-    <div class="actions">
-      <%= form.submit  %>
+          
+      </div>
+      <div class="panel-footer">
+          <%= form.submit "Save change", class: 'btn btn-success btn-block' %>
+          <% end %>
+      </div>
     </div>
-    <% end %>
-
   </div>
 </div>

@@ -1,8 +1,15 @@
 Rails.application.routes.draw do
+  
+  devise_for :mahasiswas, path: 'mahasiswas',controllers: { sessions: 'mahasiswas/sessions', registrations: 'mahasiswas/registrations'}
+
   resources :menus
   get '/menu_saya', to: 'menus#menu_saya'
 
-  devise_for :warungs
+  devise_for :warungs, path: 'warungs', controllers: { sessions: 'warungs/sessions', registrations: 'warungs/registrations'}
+  resources :warungs, only: [:index, :show] do
+    resources :menus, only:[:index, :show]
+  end
+  get '/warungs', to: 'warungs#index'
 
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'

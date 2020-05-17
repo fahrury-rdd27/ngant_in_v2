@@ -19,7 +19,14 @@
 		<ul class="nav navbar-nav navbar-right">
 			<li><%= link_to "Home", root_path %></li>
 			<% if !warung_signed_in? %>
-				<li><%= link_to "Daftarkan warungmu!", new_warung_registration_path %></li>
+				<% if mahasiswa_signed_in? %>
+					<li><%= link_to "Temukan menumu", menus_path %></li>
+					<li><%= link_to "Temukan warungmu", warungs_path %></li>
+					<li><%= link_to "Sign out", destroy_mahasiswa_session_path, method: :delete %></li>
+				<% else %>
+					<li><%= link_to "Daftarkan warungmu!", new_warung_registration_path %></li>
+					<li><%= link_to "Mahasiswa ngant.in", new_mahasiswa_session_path %></li>
+				<% end -%>
 			<% else %>
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= current_warung.nama %>

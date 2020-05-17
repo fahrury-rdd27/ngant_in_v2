@@ -1,0 +1,17 @@
+
+<h1>Warung di Ngant.in</h1>
+<div class="row">
+	<% @warungs.each do |warung| %>
+	<div class="col-md-4">
+		<%= link_to '' do %>
+		<div class="panel panel-info">
+			<div class="panel-heading"><h4><%= warung.nama %><h4></div>
+			<div class="panel-body"><%= image_tag warung.foto.variant(resize_to_fill: [800, 600]), class: 'img-responsive' %></div>
+			<div class="panel-footer">
+				<div class="glyphicon glyphicon-map-marker"></div> <%= warung.alamat %>
+			</div>
+		</div>
+		<% end -%>
+	</div>
+	<% end -%>
+</div>
