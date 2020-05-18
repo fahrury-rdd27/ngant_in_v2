@@ -48,7 +48,7 @@ class MenusController < ApplicationController
     @current_warung = current_warung.id
     @menu.destroy
     respond_to do |format|
-      format.html { redirect_to menus_url, notice: 'Menu was successfully destroyed.' }
+      format.html { redirect_to menu_saya_path, notice: 'Menu was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

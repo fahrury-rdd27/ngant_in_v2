@@ -3,17 +3,19 @@
 <h1>Menu <%= current_warung.nama %></h1>
 
 <div class="row">
-	<% current_warung.menus.each do |menu| %>
-	<div class="col-sm-4">
-		<%= link_to menu do %>
-		<div class="panel panel-warning">
-			<div class="panel-heading"><h3><%= menu.nama %></h3></div>
-			<div class="panel-body"><%= image_tag menu.image.variant(resize_to_fill: [600, 400]), class: 'img-responsive' %></div>
-			<div class="panel-footer">Harga: Rp. <%= menu.harga %></div>
+		<% current_warung.menus.each do |menu| %>
+		<div class="col-sm-4">
+			<%= link_to menu do %>
+			<div class="panel panel-warning">
+				<div class="panel-heading"><h3><%= menu.nama %></h3></div>
+				<% if menu.image.attached? %>
+				<div class="panel-body"><%= image_tag menu.image.variant(resize_to_fill: [600, 400]), class: 'img-responsive' %></div>
+				<% end -%>
+				<div class="panel-footer">Harga: Rp. <%= menu.harga %></div>
+			</div>
+			<% end -%>
 		</div>
 		<% end -%>
-	</div>
-	<% end -%>
 	<%= link_to new_menu_path do -%>
 	<div class="col-sm-4">
 		<div class="panel panel-success">

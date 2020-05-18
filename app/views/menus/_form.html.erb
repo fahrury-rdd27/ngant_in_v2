@@ -2,8 +2,8 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="panel panel-success">
       <div class="panel-heading"><h1></h1></div>
-      <div class="panel-body">
         <%= form_with(model: menu, local: true) do |form| %>
+        <div class="panel-body">
         <% if menu.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(menu.errors.count, "error") %> prohibited this menu from being saved:</h2>
@@ -30,13 +30,13 @@
           <%= form.label :image %>
           <%= form.file_field :image %>
         </div>
-
-          
       </div>
-      <div class="panel-footer">
-          <%= form.submit "Save change", class: 'btn btn-success btn-block' %>
-          <% end %>
-      </div>
+        <div class="panel-footer">
+          <div class="field">
+            <%= form.submit "Save change", class: 'btn btn-success btn-block' %>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

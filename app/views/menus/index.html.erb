@@ -7,7 +7,9 @@
       <%= link_to menu do %>
         <div class="panel panel-default">
           <div class="panel-heading"><h3><%= menu.nama %><h3></div>
+            <% if menu.image.attached? %>
           <div class="panel-body"><%= image_tag menu.image.variant(resize_to_fill: [800, 600]), class: 'img-responsive' %></div>
+          <% end -%>
           <div class="panel-footer"><h4><div class="glyphicon glyphicon-map-marker"></div> <%= menu.warung.alamat %></h4></div>
       </div>
       <% end -%>

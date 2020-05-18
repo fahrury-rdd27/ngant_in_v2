@@ -2,7 +2,9 @@
 	<div class="col-md-6 col-md-offset-3">
 		<div class="panel panel-success">
 			<div class="panel-heading"><h3><%= @menu.warung.nama %></h3></div>
+			<% if @menu.image.attached? %>
 			<div class="panel-body"><%= image_tag @menu.image.variant(resize_to_fill: [800, 600]), class: 'img-responsive' %></div>
+			<% end -%>
 			<div class="panel-footer">
 				<h4><%= @menu.nama %></h4>
 				<h4>Rp. <%= @menu.harga %></h4>
