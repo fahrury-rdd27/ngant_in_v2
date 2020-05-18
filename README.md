@@ -76,12 +76,7 @@ Setelah mahasiswa membeli makanan atau minuman, ia dapat memberikan penilaian te
 Lalu pedagang dapat melihat penilaian yang diberikan mahasiswa agar.
 
 ##  Activity diagram
-
-1. Mahasiswa
-![activity1]
-
-2. Pedagang
-![activity2]
+![Activity Diagram](https://user-images.githubusercontent.com/45058486/82233407-2c720e00-995a-11ea-9f2a-6a0021bb8b0f.jpeg)
 
 ##  Gantt chart
 
