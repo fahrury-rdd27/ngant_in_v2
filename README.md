@@ -89,12 +89,7 @@ Lalu pedagang dapat melihat penilaian yang diberikan mahasiswa agar.
 ![erd]
 
 ##  Hasil implementasi perangkat lunak
-![sc1](https://user-images.githubusercontent.com/45058486/82168403-e16be280-98e8-11ea-9275-5d512e0ff923.png)
-![Screenshot from 2020-05-13 08-49-47](https://user-images.githubusercontent.com/45058486/82168764-c8176600-98e9-11ea-9d12-9fe2b2e21a74.png)
-![Screenshot from 2020-05-13 09-03-14](https://user-images.githubusercontent.com/45058486/82168770-cbaaed00-98e9-11ea-87f5-39c54ae1f8c5.png)
 ![Screenshot from 2020-05-13 09-19-48](https://user-images.githubusercontent.com/45058486/82168780-cf3e7400-98e9-11ea-8433-bebff2f9bba3.png)
-![Screenshot from 2020-05-13 13-43-45](https://user-images.githubusercontent.com/45058486/82168787-d1a0ce00-98e9-11ea-85bd-92b5468f55d2.png)
-![Screenshot from 2020-05-16 13-06-13](https://user-images.githubusercontent.com/45058486/82168792-d4032800-98e9-11ea-89bc-b06e62c56a15.png)
 ![Screenshot from 2020-05-18 09-18-09](https://user-images.githubusercontent.com/45058486/82168805-d796af00-98e9-11ea-915d-89980f0403f2.png)
 ![Screenshot from 2020-05-18 09-21-36](https://user-images.githubusercontent.com/45058486/82168808-d9f90900-98e9-11ea-9cda-f6324488ef19.png)
 ![Screenshot from 2020-05-18 09-22-35](https://user-images.githubusercontent.com/45058486/82168815-dbc2cc80-98e9-11ea-922b-6153be96e119.png)
