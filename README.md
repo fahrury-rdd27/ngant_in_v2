@@ -52,7 +52,7 @@ Goals&ensp;: Mahasiswa mengetahui produk makanan dan minuman apa saja yang dijua
 
 ##  Use case diagram
 
-![usecase]
+![Use case Ngant in](https://user-images.githubusercontent.com/47111148/82173462-8988a800-98f7-11ea-843b-4ae058693da9.png)
 
 ##  Use case description
 
@@ -78,7 +78,7 @@ Lalu pedagang dapat melihat penilaian yang diberikan mahasiswa agar.
 ![activity1]
 
 2. Pedagang
-![activity2]
+![NGANT IN-CLASS DIAGRAM](https://user-images.githubusercontent.com/47111148/82173464-8b526b80-98f7-11ea-9a5c-796b3e8ec620.png)
 
 ##  Gantt chart
 
@@ -86,7 +86,7 @@ Lalu pedagang dapat melihat penilaian yang diberikan mahasiswa agar.
 
 ##  ERD
 
-![erd]
+![NGANT IN-ERD](https://user-images.githubusercontent.com/47111148/82173470-8f7e8900-98f7-11ea-8e19-90c6fcae93a1.png)
 
 ##  Hasil implementasi perangkat lunak
 ![Screenshot from 2020-05-13 09-19-48](https://user-images.githubusercontent.com/45058486/82168780-cf3e7400-98e9-11ea-8433-bebff2f9bba3.png)
