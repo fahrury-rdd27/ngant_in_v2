@@ -86,7 +86,8 @@ Lalu pedagang dapat melihat penilaian yang diberikan mahasiswa agar.
 
 ##  ERD
 
-![erd]
+![NGANT IN-ERD](https://user-images.githubusercontent.com/47111148/82173310-f18abe80-98f6-11ea-9584-a89d36f05924.png)
+
 
 ##  Hasil implementasi perangkat lunak
 ![Screenshot from 2020-05-13 09-19-48](https://user-images.githubusercontent.com/45058486/82168780-cf3e7400-98e9-11ea-8433-bebff2f9bba3.png)
