@@ -50,6 +50,7 @@ Goals&ensp;: Mahasiswa mengetahui produk makanan dan minuman apa saja yang dijua
 - Sebagai seorang pedagang saya ingin mengetahui berapa banyak mahasiswa yang ingin tahu dengan warung saya.
 - Sebagai seorang pedagang saya ingin tau tanggapan pembeli terhadap makanan atau minuman yang saya jual.
 
+
 ##  Use case diagram
 
 ![Use case Ngant in](https://user-images.githubusercontent.com/47111148/82176414-dfae1900-9900-11ea-88ec-282224bb4f7e.png)
