@@ -1,7 +1,7 @@
 ![logo](https://user-images.githubusercontent.com/45058486/82168018-c8aefd00-98e7-11ea-89e4-ad3a5a4ed5bd.png)
 # NGANT.IN
 
-###[Ngant.in Deployed Apps on Heroku](https://secret-escarpment-47024.herokuapp.com/).
+### [Ngant.in Deployed Apps on Heroku](https://secret-escarpment-47024.herokuapp.com/).
 
 Kelompok:
 1. G64180002 Shibgotollah Sabilana &ensp; 
